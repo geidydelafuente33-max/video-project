@@ -7,7 +7,6 @@ import {
   useVideoConfig,
 } from "remotion";
 import { Logo } from "./HelloWorld/Logo";
-import { Subtitle } from "./HelloWorld/Subtitle";
 import { Title } from "./HelloWorld/Title";
 
 export type HelloWorldProps = {
@@ -63,10 +62,6 @@ export const HelloWorld: React.FC<HelloWorldProps> = ({
         {/* Sequences can shift the time for its children! */}
         <Sequence from={35}>
           <Title titleText={propOne} titleColor={propTwo} />
-        </Sequence>
-        {/* The subtitle will only enter on the 75th frame. */}
-        <Sequence from={75}>
-          <Subtitle />
         </Sequence>
       </AbsoluteFill>
     </AbsoluteFill>

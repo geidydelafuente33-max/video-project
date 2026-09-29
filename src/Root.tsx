@@ -2,12 +2,26 @@ import "./index.css";
 import { Composition } from "remotion";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
+import { Elegancia, FPS, TOTAL_FRAMES } from "./Elegancia";
 
 // Each <Composition> is an entry in the sidebar!
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="Elegancia"
+        component={Elegancia}
+        durationInFrames={TOTAL_FRAMES}
+        fps={FPS}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          images: ["photo-1.jpg", "photo-2.jpg", "photo-3.jpg"],
+          text: "Elegancia en cada paso",
+        }}
+      />
+
       <Composition
         // You can take the "id" to render a video:
         // npx remotion render HelloWorld
